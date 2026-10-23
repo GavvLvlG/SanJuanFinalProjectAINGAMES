@@ -4,7 +4,7 @@ public class EnemyAI : MonoBehaviour
 {
 
     [SerializeField]
-    float paddleSpeed = 5;
+    float paddleSpeed = 100;
 
     [SerializeField]
     float topBound = 560;
@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     private Ball ballPrefab;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         ballPrefab = GameObject.FindAnyObjectByType<Ball>();
@@ -46,7 +46,7 @@ public class EnemyAI : MonoBehaviour
                 transform.position = new Vector2(transform.position.x, newYPos);
             }
         }
-        // prevent AI paddle from leaving top and bottom of the screen
+
         if (transform.position.y > topBound)
         {
             transform.position = new Vector2(transform.position.x, topBound);

@@ -55,5 +55,6 @@ public class Ball : MonoBehaviour
         float yForce = Random.Range(-yForceRange, yForceRange);
         Vector2 force = new Vector2(0, yForce);
         ballRb.AddForce(force);
+        speedX = speedX * -1;
     }
 }
